@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ece6ff; /* Cambiar según tus colores */
+            color: #333; /* Cambiar según tus colores */
+            padding: 50px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fffae6; /* Cambiar según tus colores */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #3e3cc9; /* Cambiar según tus colores */
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            background-color: #00026c; /* Cambiar según tus colores */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #2f0055; /* Cambiar según tus colores */
+        }
+        .quiz {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: #ffd6c09c;
+      border-radius: 10px;
+      border: 2px solid #ddd;
+    }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Encuesta de Opinión</h2>
+        <form action="/submit" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="opinion">¿Qué opinas de nuestra página de cuentos?</label>
+                <textarea id="opinion" name="opinion" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="opinion">¿Que agregarias a nuestra pagina de cuentos?</label>
+                <textarea id="opinion" name="opinion" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="opinion">¿Cuentanos como fue tu experiencia?</label>
+                <textarea id="opinion" name="opinion" rows="2" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="opinion">¿Que opinas sobre los cuentos que sube la comunidad?</label>
+                <textarea id="opinion" name="opinion" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="calificacion">Calificación:</label>
+                <select id="calificacion" name="calificacion" required>
+                    <option value="excelente">Excelente</option>
+                    <option value="buena">Buena</option>
+                    <option value="regular">Regular</option>
+                    <option value="mala">Mala</option>
+                </select>
+            </div>
+            <div class="quiz">
+                <h2>Para Finalizar</h2>
+                <form>
+                  <p>1. ¿Nos recomendarias como una pagina educativa y formativa para niños niñas y adolecentes?</p>
+                  <label><input type="radio" name="question1" value="2012"> si</label>
+                  <label><input type="radio" name="question1" value="2014"> no</label>
+                  <label><input type="radio" name="question1" value="2016"> talvez</label>
+          
+                  <p>2. ¿te gustaria que agreguemos categorias para clasificar los cuentos y su rango de edad?</p>
+                  <label><input type="radio" name="question2" value="Christopher Nolan"> Estoy deacuerdo</label>
+                  <label><input type="radio" name="question2" value="Steven Spielberg"> no es necesario</label>
+                  <label><input type="radio" name="question2" value="James Cameron"> estoy bien asi</label>
+          
+                  <p>3. ¿como te sientes ahora mismo?!</p>
+                  <label><input type="radio" name="question3" value="Viajes espaciales"> Con ganas de escribir un cuento!</label>
+                  <label><input type="radio" name="question3" value="Vida en Marte"> triste (Lee un cuento te animara)</label>
+                  <label><input type="radio" name="question3" value="Tecnología militar"> estoy inspirado</label>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
